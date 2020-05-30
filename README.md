@@ -5,6 +5,11 @@ Mounting cd:
     mkdir /mnt/cdrom
     mount -t iso9660 -o ro /dev/cdrom /mnt/cdrom
 ```
+# Apt
+Show all installed packages:
+```bash
+    apt list --installed
+```
 
 # Systemd
 Services boot time:
@@ -23,6 +28,10 @@ Find all files containing given filename (not case sensitive) and find all phras
 ```bash
     find . -iname "*filename*" -exec grep --color -Hn "phrase" {} \;
 ```
+Watch 10 most recently updated files in current folder:
+```bash
+    watch -n 0.5 'ls -lhatr | tail -n 10'
+```
 # Programming
 
 
@@ -31,6 +40,9 @@ Find all files containing given filename (not case sensitive) and find all phras
 # Monitoring
 
 # Logs
+```bash
+
+```
 
 # Text
 
