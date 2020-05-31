@@ -39,6 +39,31 @@ Watch 10 most recently updated files in current folder:
     watch -n 0.5 'ls -lhatr | tail -n 10'
 ```
 # Programming
+Check all load-time dependecies of executable or dynamic library:
+```bash
+    ldd executable
+    ldd shared_library.so
+```
+
+List all symbols of a binary file in demangled form (C++):
+```bash
+    nm -C library
+    objdump -C -t library
+```
+
+Disassemble binary file and mix with source code:
+```bash
+    objdump -S -C -d library
+```
+Read binary object file header:
+```bash
+    readelf -h library
+```
+
+Track all system calls made by process:
+```bash
+    strace executable
+```
 
 # SSH
 Generate public key and share it with remote host:
