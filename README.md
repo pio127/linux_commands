@@ -1,3 +1,9 @@
+# System
+Set current time manually:
+```bash
+    date --set="31 May 2020 10:00:00"
+```
+
 # Hardware
 Mounting cd:
 ```bash
@@ -34,8 +40,40 @@ Watch 10 most recently updated files in current folder:
 ```
 # Programming
 
+# SSH
+Generate public key and share it with remote host:
+```bash
+    ssh-keygen -t rsa
+    ssh-copy-id name@host_ip
+```
+
+Send a copy of local directory to remote host over SSH:
+```bash
+    scp -r local_directory/ name@host_ip:~/
+```
+
+Get a copy of local file from remote host over SSH:
+```bash
+    scp name@host_ip:~/remote_file ./
+```
+
+Using sftp:
+```bash
+    sftp name@host_ip
+    # when connected: 
+    get remote_file ~/local_folder/ # copying file
+    bye # ending connection
+```
+
 
 # Networking
+Check details of all network devices:
+
+Add ip address to network device:
+
+Remove ip address attached to network device:
+
+Restart networking:
 
 # Monitoring
 
