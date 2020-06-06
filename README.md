@@ -1,8 +1,8 @@
-
-# Apt
+# Apt and dpkg
 Show all installed packages:
 ```bash
 apt list --installed
+dpkg --list
 ```
 
 # Files
@@ -24,22 +24,41 @@ mount -t iso9660 -o ro /dev/cdrom /mnt/cdrom
 ```
 
 # Monitoring
-Check bandwith for given network interface:
+Watch bandwith of a chosen network interface:
 ```bash
 iftop -i eth0
 ```
 # Networking
-Check details of all network devices:
-
+Check details of all network interfaces:
+```bash
+ip addr
+ifconfig
+```
 Add ip address to network device:
-
+```bash
+ip addr add 192.168.1.50/24 dev eth0
+```
 Remove ip address attached to network device:
-
-Restart networking:
-
+```bash
+ip addr delete 192.168.1.50/24 dev eth0
+```
+Restart network interface:
+```bash
+ifdown eth0
+ifup eth0
+```
+Restart all network inerfaces:
+```bash
+/etc/init.d/networking restart
+systemctl restart networking.service
+```
 Ping all addresses in range defined by netmask:
 ```bash
 nmap -sP 192.168.1.0/24
+```
+Print all opened ports:
+```bash
+netstat -tulpn
 ```
 
 # Programming
@@ -67,6 +86,11 @@ readelf -h library
 Track all system calls made by process:
 ```bash
 strace executable
+```
+
+Change runpath of shared library or executable:
+```bash
+patchelf --set-rpath path
 ```
 
 # SSH
