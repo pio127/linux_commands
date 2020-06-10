@@ -4,9 +4,11 @@ Show all installed packages:
 apt list --installed
 dpkg --list
 ```
-Downloading frequently used packages:
+Download frequently used packages:
 ```bash
-apt install build-essential cmake tmux vim-gtk3 zsh mc git patchelf zathura xclip wireshark valgrind virtualbox htop most fzf doxygen clang  
+apt install build-essential cmake tmux vim-gtk3 zsh mc git patchelf \
+            zathura xclip wireshark valgrind virtualbox htop most \
+            fzf doxygen clang  
 ```
 
 # Files
