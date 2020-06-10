@@ -4,6 +4,10 @@ Show all installed packages:
 apt list --installed
 dpkg --list
 ```
+Downloading frequently used packages:
+```bash
+apt install build-essential cmake tmux vim-gtk3 zsh mc git patchelf zathura xclip wireshark valgrind virtualbox htop most fzf doxygen clang  
+```
 
 # Files
 Find all files containing given filename (not case sensitive) and find all phrase occurences in each of them (color printing with filenames and line numbers):
