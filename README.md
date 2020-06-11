@@ -6,9 +6,8 @@ dpkg --list
 ```
 Download frequently used packages:
 ```bash
-apt install build-essential cmake tmux vim-gtk3 zsh mc git patchelf \
-            zathura xclip wireshark valgrind virtualbox htop most \
-            fzf doxygen clang  
+apt install fzf tmux vim-gtk3 zsh mc zathura xclip wireshark virtualbox htop most nnn \
+            build-essential doxygen clang valgrind cmake patchelf git 
 ```
 
 # Files
@@ -97,6 +96,11 @@ strace executable
 Change runpath of shared library or executable:
 ```bash
 patchelf --set-rpath path
+```
+
+Iterativaly rebuild and display output:
+```bash
+watch -n 10 'gcc main.c && ./a'
 ```
 
 # SSH
