@@ -6,7 +6,8 @@ dpkg --list
 ```
 Download frequently used packages:
 ```bash
-apt install fzf tmux vim-gtk3 zsh mc zathura xclip wireshark virtualbox htop most nnn \
+apt install fzf tmux vim-gtk3 zsh mc zathura xclip wireshark \
+            virtualbox htop most nnn mpv \
             build-essential doxygen clang valgrind cmake patchelf git 
 ```
 
@@ -102,6 +103,12 @@ Iterativaly rebuild and display output:
 ```bash
 watch -n 10 'gcc main.c && ./a'
 ```
+Gather all dependencies used by target executable (all that have been found by dynamic loader):
+```bash
+[ -d libraries ] || mkdir libraries
+cp `ldd executable | awk '{print $3}' | awk 'NF' | sed '/not/d'` -t libraries
+```
+
 
 # SSH
 Generate public key and share it with remote host:
